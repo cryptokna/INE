@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>OSTRAN Main</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+        <style>
+            h1 {
+                color: white !important;
+            }
+            
+            #text {
+                color: white !important;
+            }
+            
+            body {
+                background: #111111;
+                font-family: 'Varela', sans-serif;
+            }
+            
+            .glitch {
+              color: white;
+              font-size: 100px;
+              position: relative;
+              width: 400px;
+              margin: 0 auto;
+            }
+
+            @keyframes noise-anim {
+              0% {
+                clip: rect(36px, 9999px, 68px, 0);
+              }
+              5% {
+                clip: rect(7px, 9999px, 6px, 0);
+              }
+              10% {
+                clip: rect(90px, 9999px, 34px, 0);
+              }
+              15% {
+                clip: rect(97px, 9999px, 67px, 0);
+              }
+              20% {
+                clip: rect(59px, 9999px, 19px, 0);
+              }
+              25% {
+                clip: rect(40px, 9999px, 30px, 0);
+              }
+              30% {
+                clip: rect(8px, 9999px, 1px, 0);
+              }
+              35% {
+                clip: rect(30px, 9999px, 12px, 0);
+              }
+              40% {
+                clip: rect(30px, 9999px, 7px, 0);
+              }
+              45% {
+                clip: rect(25px, 9999px, 61px, 0);
+              }
+              50% {
+                clip: rect(9px, 9999px, 12px, 0);
+              }
+              55% {
+                clip: rect(47px, 9999px, 74px, 0);
+              }
+              60% {
+                clip: rect(30px, 9999px, 91px, 0);
+              }
+              65% {
+                clip: rect(96px, 9999px, 85px, 0);
+              }
+              70% {
+                clip: rect(67px, 9999px, 63px, 0);
+              }
+              75% {
+                clip: rect(63px, 9999px, 47px, 0);
+              }
+              80% {
+                clip: rect(32px, 9999px, 19px, 0);
+              }
+              85% {
+                clip: rect(94px, 9999px, 76px, 0);
+              }
+              90% {
+                clip: rect(61px, 9999px, 12px, 0);
+              }
+              95% {
+                clip: rect(95px, 9999px, 32px, 0);
+              }
+              100% {
+                clip: rect(27px, 9999px, 80px, 0);
+              }
+            }
+            .glitch:after {
+              content: attr(data-text);
+              position: absolute;
+              left: 2px;
+              text-shadow: -1px 0 red;
+              top: 0;
+              color: white;
+              background: #111111;
+              overflow: hidden;
+              clip: rect(0, 900px, 0, 0);
+              animation: noise-anim 2s infinite linear alternate-reverse;
+            }
+
+            @keyframes noise-anim-2 {
+              0% {
+                clip: rect(1px, 9999px, 17px, 0);
+              }
+              5% {
+                clip: rect(23px, 9999px, 78px, 0);
+              }
+              10% {
+                clip: rect(89px, 9999px, 8px, 0);
+              }
+              15% {
+                clip: rect(81px, 9999px, 1px, 0);
+              }
+              20% {
+                clip: rect(23px, 9999px, 2px, 0);
+              }
+              25% {
+                clip: rect(52px, 9999px, 15px, 0);
+              }
+              30% {
+                clip: rect(38px, 9999px, 69px, 0);
+              }
+              35% {
+                clip: rect(8px, 9999px, 93px, 0);
+              }
+              40% {
+                clip: rect(89px, 9999px, 32px, 0);
+              }
+              45% {
+                clip: rect(77px, 9999px, 12px, 0);
+              }
+              50% {
+                clip: rect(94px, 9999px, 44px, 0);
+              }
+              55% {
+                clip: rect(58px, 9999px, 26px, 0);
+              }
+              60% {
+                clip: rect(62px, 9999px, 12px, 0);
+              }
+              65% {
+                clip: rect(99px, 9999px, 62px, 0);
+              }
+              70% {
+                clip: rect(3px, 9999px, 98px, 0);
+              }
+              75% {
+                clip: rect(5px, 9999px, 10px, 0);
+              }
+              80% {
+                clip: rect(35px, 9999px, 63px, 0);
+              }
+              85% {
+                clip: rect(78px, 9999px, 87px, 0);
+              }
+              90% {
+                clip: rect(72px, 9999px, 16px, 0);
+              }
+              95% {
+                clip: rect(6px, 9999px, 55px, 0);
+              }
+              100% {
+                clip: rect(86px, 9999px, 82px, 0);
+              }
+            }
+            .glitch:before {
+              content: attr(data-text);
+              position: absolute;
+              left: -2px;
+              text-shadow: 1px 0 blue;
+              top: 0;
+              color: white;
+              background: #111111;
+              overflow: hidden;
+              clip: rect(0, 900px, 0, 0);
+              animation: noise-anim-2 3s infinite linear alternate-reverse;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="index.html">OSTRAN</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" id="home_about" href="#details">Details</a>
+                        <a class="nav-item nav-link active" id="installation" href="#hti">How to install</a>
+                        <a class="nav-item nav-link active" id="developers" href="#devs">Developers</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="text-center">
+                
+                <div class="modal fade bd-ili-pic-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <br>
+                            <p><b>This is how ili looks like.</b></p>
+                            <img src="https://iamili.com/common/images/ili_opi.jpg" class="img-fluid">
+                            <p><b>You can find out more about ili, <a href="https://iamili.com" target="_blank">here</a></b></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal fade bd-ili-vid-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_W7RT4nMUwo" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal fade bd-ili-engine-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <img src="assets/engine.png" class="img-fluid">
+                            <p>Select "OSTRAN" under "Engine selection"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="modal fade bd-ili-update-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <img src="update.png" class="img-fluid">
+                            <p>Simply click "yes" on the prompt to update.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glitch text-center" data-text="OSTRAN">OSTRAN</div>
+                <p class="lead" id="text">OSTRAN is an open source translation engine for the device, <button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-ili-pic-modal-lg">ili</button>.</p>
+                <hr>
+                
+                <div class="glitch text-center" data-text="DETAILS" id="details">DETAILS</div>
+                <br>
+                <h2 id="text">How did the concept of OSTRAN came about?</h2>
+                <hr>
+                <p class="lead" id="text">The idea of OSTRAN came about after we conducted a survey regarding the difficulties that people face when traveling.</p>
+                <p class="lead" id="text">To view the results/responses of the survey, click <a href="survey.html">here</a></p>
+                <br>
+                <hr>
+                <h2 id="text">What is ili?</h2>
+                <hr>
+                <p class="lead" id="text">Ili is an offline wearable translation device which can translate any input language quickly in a matter of seconds, before outputting it through a text to speech(TTS).</p>
+                <br>
+                <hr>
+                <h2 id="text">How does it work?</h2>
+                <hr>
+                <p class="lead" id="text">Below is a short video of how ili works.</p>
+                <p><button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-ili-vid-modal-lg">Video</button></p>
+                <br>
+                <hr>
+                <h2 id="text">Why use ili with the OSTRAN engine?</h2>
+                <hr>
+                <p class="lead" id="text">Since the original STREAM engine for ili is not open source and the developers have no plans to add in more language support, with the help of the OSTRAN engine, ili will be able to have more language support by allowing external developers or the ili community to push updates to github. Most importantly, OSTRAN engine is <strong><u>FREE</u></strong>.</p>
+                <br>
+                
+                <div class="glitch text-center" data-text="INSTALL" id="hti">INSTALL</div>
+                <hr>
+                <h2 id="text">How to install the engine?</h2>
+                <hr>
+                <p class="lead" id="text">To install the engine, you have to download and install the modified version of the official ili desktop application from our github page. After doing so, launch the application and all you have to do is just select "OSTRAN" under "Engine selection".</p>
+                <p><button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-ili-engine-modal-lg">Installation</button></p>
+                <br>
+                <hr>
+                <h2 id="text">How to update the engine?</h2>
+                <hr>
+                <p class="lead" id="text">When there is a new commit in our github's master branch, the application will automatically prompt you to update. To update the engine, all you have to do is simply click on the "Update" button and if there is an udpdate, a popout will appear to prompt if you want to update the engine. Click "yes" and wait till it finishes.</p>
+                <p><button type="button" class="btn btn-secondary" data-toggle="modal" data-target=".bd-ili-update-modal-sm">Updating</button></p>
+                <br>
+                <hr>
+                <h2 id="text">Wouldn't this mean that I'll have to update regularly?</h2>
+                <hr>
+                <p class="lead" id="text">No. We will only <u><strong>ENSURE</strong></u> that major updates will be committed in the github page.</p>
+
+                <div class="glitch text-center" data-text="DEVELOP" id="devs">DEVELOP</div>
+                <hr>
+                <h2 id="text">How do I contribute if I am a developer?</h2>
+                <hr>
+                <p class="lead" id="text">You can contribute to the engine by heading over to our github page.</p>
+                <br>
+                <hr>
+                <h2 id="text">How do I get my work to be approved?</h2>
+                <hr>
+                <p class="lead" id="text">To get your work to be approved, we have guidelines which you will be able to find on the github page.</p>
+                <br>
+                <br>
+                <h2 id="text">Can I contribute by improving how the engine work?</h2>
+                <hr>
+                <p class="lead" id="text">Yes, you can. Just submit your work on our github page and we will review it. If it is something that can help to improve the engine further, we will approve your commit to the master branch.</p>
+                <br>
+                <br>
+                <h2 id="text">Do I get anything if I contribute?</h2>
+                <hr>
+                <p class="lead" id="text">No. By doing this, you are agreeing to give your own time and effort in helping the community to add in more language support. Please do not contribute in hopes of getting anything in return.</p>
+                <br>
+                <br>
+                <h2 id="text">TO ALL DEVELOPERS OUT THERE</h2>
+                <hr>
+                <p class="lead" id="text">We would like to thank all developers who helped us in making this Engine possible, and as well as to thank all developers and translators in helping to add more language support for the Engine.</p>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
